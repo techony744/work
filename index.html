@@ -1,0 +1,267 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+    <link rel="stylesheet" href="./asset/icons/css/all.css">
+    <link rel="stylesheet" href="style.css">
+
+        <!-- Chart.js CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-space" id="navSpace">
+                <div class="main">
+                    <div class="nav-menu" id="navMenu">
+                        <div class="nav-logo">
+                            <div class="box">
+                                <p>Full Logo</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-home"></i><a href="#"><span>Home</span></a></li>
+                            <li><i class="fas fa-calendar"></i><a href="#">Event</a></li>
+                            <li><i class="fas fa-user"></i><a href="#">Speakers</a></li>
+                            <li><i class="fas fa-clipboard"></i><a href="#">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="nav-menu" >
+                    <ul>
+                        <li><i class="fas fa-bell"></i><a href="#">Notifications</a></li>
+                        <li><i class="fas fa-comment"></i><a href="#">Messages</a></li>
+                        <li><i class="fas fa-cog"></i><a href="#">Settings</a></li>
+                        <li><i class="fas fa-angle-double-left"></i><a href="#">Collapse</a></li>
+                        <li class="profile">
+                            <div class="box2">
+                                <i class="fas fa-user-circle"></i> 
+                            </div>
+                            <div class="word">
+                                <p>
+                                    Rudra Devi <br>
+                                    rudra.devi@gmail.com
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                </span>
+            </div>
+        </div>
+        <div class="body">
+            <p>Welcome! here's your summary</p>
+            <div class="per">
+                <div class="num">
+                    <div class="content">
+                        <div class="label">
+                            <div class="text">Total Events</div>
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="value" id="val1">
+                            <div class="cash">100,000</div>
+                            <i class="fas fa-arrow-up"></i>
+                            <div class="int">+5.0%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="num">
+                    <div class="content">
+                        <div class="label">
+                            <div class="text">Active Speakers</div>
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="value" id="val2">
+                            <div class="cash">25</div>
+                            <i class="fas fa-arrow-up"></i>
+                            <div class="int">-5.0%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="num">
+                    <div class="content">
+                        <div class="label">
+                            <div class="text">Total Registrations</div>
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="value" id="val3">
+                            <div class="cash">300</div>
+                            <i class="fas fa-arrow-up"></i>
+                            <div class="int">+5.0%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="num">
+                    <div class="content">
+                        <div class="label">
+                            <div class="text">Total Revenue</div>
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="value" id="val4">
+                            <div class="cash">500,000</div>
+                            <i class="fas fa-arrow-up"></i>
+                            <div class="int">+5.0%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chart">
+                <p>Event Registrations per month</p>
+                <div class="row">
+                    <div class="bar">
+                        <div id="chartContainer">
+                            <canvas id="myBarChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="./asset/img/car1.png" alt="">
+                        <img src="./asset/img/car2.png" alt="">
+                        <img src="./asset/img/car3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <p>Events History</p>
+                <div class="tb">
+                    <div class="tb-up">
+                        <div class="left">
+                            <div class="search">
+                                <i class="fas fa-search"></i>
+                                <input type="search" class="input-field" placeholder=" search..."> 
+                            </div>
+                            <li class="drop">
+                                <a href="#">Date</a>
+                                <i class="fas fa-solid fa-angle-down"></i>
+                            </li>
+                            <li class="drop">
+                                <a href="#">Status</a>
+                                <i class="fas fa-solid fa-angle-down"></i>
+                            </li>
+                            <li class="drop">
+                                <a href="#">Name</a>
+                                <i class="fas fa-solid fa-angle-down"></i>
+                                <div class="dot"></div>
+
+                            </li>
+                            <div class="word" ><span>Displaying 100 results</span></div>
+                            
+                        </div>
+                        <div class="right">
+                            <div class="word">
+                                <span>Sort:</span>
+                                <li class="drop">
+                                    <a href="#">Most Recent</a>
+                                    <i class="fas fa-solid fa-angle-down"></i>
+                                </li>
+                            </div>
+                            <div class="dot">
+                                <span>2</span>
+                            </div>
+                            <div class="export">
+                                <i class="fas fa-download"></i>
+                                <a href="#">Export</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tb-center">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Event Name</th>
+                                    <th>Date</th>
+                                    <th>Speaker</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cloud Innovation Summit</td>
+                                    <td>2024-10-15</td>
+                                    <td>Jane Doe</td>
+                                    <td><li>Completed</li></td>
+                                </tr>
+                                <tr>
+                                    <td>Blockchain Revolution Conference</td>
+                                    <td>2024-11-05</td>
+                                    <td>Dr. Peter Smith</td>
+                                    <td><span><li>In Progress</li></span></td>
+                                </tr>
+                                <tr>
+                                    <td>AI in Healthcare Symposium</td>
+                                    <td>2024-12-01</td>
+                                    <td>Dr. Aisha Malik</td>
+                                    <td><li>Completed</li></td>
+                                </tr>
+                                <tr>
+                                    <td>Future of Fintech Forum</td>
+                                    <td>2024-10-25</td>
+                                    <td>John Lee</td>
+                                    <td><li>Completed</li></td>
+                                </tr>
+                                <tr>
+                                    <td>Data Analytics in Business</td>
+                                    <td>2024-11-12</td>
+                                    <td>Rachel Moore</td>
+                                    <td><li>Completed</li></td>
+                                </tr>
+                                <tr>
+                                    <td>Sustainable Energy Expo</td>
+                                    <td>2024-09-28</td>
+                                    <td>Prof. Alan Green</td>
+                                    <td><li>Completed</li></td>
+                                </tr>
+                                <tr>
+                                    <td>Web3 Interfaces Workshop</td>
+                                    <td>2024-10-10</td>
+                                    <td>Kevin Adams</td>
+                                    <td><span><li>In Progress</li></span></td>
+                                </tr>
+                                <tr>
+                                    <td>Cybersecurity for Startups</td>
+                                    <td>2024-11-19</td>
+                                    <td>Emily Zhang</td>
+                                    <td><li>Completed</li></td>
+                                </tr>
+                                <tr>
+                                    <td>Smart Cities Forum</td>
+                                    <td>2024-10-18</td>
+                                    <td>Dr. Maria Hernandez</td>
+                                    <td><span><li>In Progress</li></span></td>
+                                </tr>
+                                <tr>
+                                    <td>Tech Safari Mixer</td>
+                                    <td>2024-09-30</td>
+                                    <td>Guest Panel</td>
+                                    <td><span><li>In Progress</li></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tb-down">
+                        <div class="left">
+                            <div class="arrow">
+                                <span><i class="fas fa-angle-left"></i></span>                                <li><span>1</span></li>
+                                <li>2</li>
+                                <li>3</li>
+                                <i class="fas fa-angle-right"></i>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="word">
+                                <span>Show:</span>
+                                <li class="drop">
+                                    <a href="#">10 rows</a>
+                                    <i class="fas fa-solid fa-angle-down"></i>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
